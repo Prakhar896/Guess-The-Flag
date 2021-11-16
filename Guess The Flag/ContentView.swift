@@ -11,6 +11,8 @@ struct ContentView: View {
     @State private var showingScore = false
     @State private var scoreTitle = ""
     @State private var userScore: Int = 0
+    @State private var questionCount = 1
+    @State private var showingGameEndAlert: Bool = false
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
@@ -71,6 +73,11 @@ struct ContentView: View {
         } message: {
             Text("Your score is \(userScore)")
         }
+        .alert("And that's game!", isPresented: $showingGameEndAlert) {
+            Button("Restart game! ↩️", action: reset)
+        } message: {
+            Text("You had a score of \(userScore)! " + getScoreJudgeText(userScore))
+        }
     }
     
     func flagTapped(_ number: Int) {
@@ -78,15 +85,44 @@ struct ContentView: View {
             scoreTitle = "Correct!"
             userScore += 1
         } else {
-            scoreTitle = "Wrong!"
+            scoreTitle = "Wrong! That's the flag of \(countries[number])."
         }
         
         showingScore = true
     }
     
     func askQuestion() {
+        if questionCount == 8 {
+            self.showingGameEndAlert = true
+        } else {
+            self.countries.shuffle()
+            self.correctAnswer = Int.random(in: 0...2)
+            self.questionCount += 1
+        }
+    }
+    
+    func getScoreJudgeText(_ score: Int) -> String {
+        var judgeText: String = ""
+        if score == 8 {
+            judgeText = "That's a perfect score! Great job!"
+        } else if score >= 6 && score < 8 {
+            judgeText = "Almost there! Keep trying!"
+        } else if score >= 4 && score < 6 {
+            judgeText = "Someone slept during their Social Studies lesson..."
+        } else if score >= 2 && score < 4 {
+            judgeText = "Man you've got some work to do! Don't worry, keep trying!"
+        } else {
+            judgeText = "Ehhh your score's ummmm, I mean...you can keep trying..."
+        }
+        
+        return judgeText
+    }
+    
+    func reset() {
         self.countries.shuffle()
         self.correctAnswer = Int.random(in: 0...2)
+        self.questionCount = 0
+        self.userScore = 0
     }
 }
 
