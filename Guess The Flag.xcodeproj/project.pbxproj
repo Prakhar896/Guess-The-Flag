@@ -14,6 +14,7 @@
 		E25643962743F36A00B4E748 /* Guess_The_FlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25643952743F36A00B4E748 /* Guess_The_FlagTests.swift */; };
 		E25643A02743F36B00B4E748 /* Guess_The_FlagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256439F2743F36B00B4E748 /* Guess_The_FlagUITests.swift */; };
 		E25643A22743F36B00B4E748 /* Guess_The_FlagUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25643A12743F36B00B4E748 /* Guess_The_FlagUITestsLaunchTests.swift */; };
+		E25643AF2744036600B4E748 /* LearningCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25643AE2744036600B4E748 /* LearningCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E256439B2743F36B00B4E748 /* Guess The FlagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guess The FlagUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E256439F2743F36B00B4E748 /* Guess_The_FlagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess_The_FlagUITests.swift; sourceTree = "<group>"; };
 		E25643A12743F36B00B4E748 /* Guess_The_FlagUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess_The_FlagUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E25643AE2744036600B4E748 /* LearningCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				E25643842743F35D00B4E748 /* Guess_The_FlagApp.swift */,
 				E25643862743F35D00B4E748 /* ContentView.swift */,
+				E25643AE2744036600B4E748 /* LearningCode.swift */,
 				E25643882743F36A00B4E748 /* Assets.xcassets */,
 				E256438A2743F36A00B4E748 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25643872743F35D00B4E748 /* ContentView.swift in Sources */,
+				E25643AF2744036600B4E748 /* LearningCode.swift in Sources */,
 				E25643852743F35D00B4E748 /* Guess_The_FlagApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

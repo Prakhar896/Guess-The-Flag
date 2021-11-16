@@ -5,13 +5,15 @@
 //  Created by Prakhar Trivedi on 16/11/21.
 //
 
-import SwiftUI
+// THIS FILE CONTAINS CODE THAT WAS WRITTEN WHEN PAUL HUDSON WAS TEACHING THE SWIFTUI CONCEPTS, FOR APP CODE LOOK AT CONTENTVIEW.SWIFT
 
-struct ContentView: View {
-    
-    @State private var showingAlert = false
-    
-    var body: some View {
+//import SwiftUI
+//
+//struct ContentView: View {
+//
+//    @State private var showingAlert = false
+//
+//    var body: some View {
         //        VStack {
         //            Spacer()
         //            Text("First")
@@ -163,10 +165,4 @@ struct ContentView: View {
 //    func executeDelete() {
 //        print("Now deleting")
 //    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
 }
